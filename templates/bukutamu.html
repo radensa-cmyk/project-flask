@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Buku Tamu</title>
+</head>
+<body>
+    <h1>Buku Tamu</h1>
+    <form action="/bukutamu" method="POST">
+        <label for="nama">Nama:</label><br>
+        <input type="text" id="nama" name="nama" required><br><br>
+
+        <label for="pesan">Pesan:</label><br>
+        <textarea id="pesan" name="pesan" required></textarea><br><br>
+
+        <button type="submit">Kirim</button>
+    </form>
+
+    <hr>
+
+    {% if nama_terbaru and pesan_terbaru %}
+        <h3>Pesan Terbaru:</h3>
+        <p>"{{ pesan_terbaru }}" - <em>{{ nama_terbaru }}</em></p>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Daftar Temanku</title>
+</head>
+<body>
+    <h1>Daftar Temanku</h1>
+    <hr>
+
+    {% if daftar_teman %}
+        <ul>
+            {% for teman in daftar_teman %}
+                <li>{{ teman }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Kamu belum punya teman </p>
+    {% endif %}
+</body>
+</html>
