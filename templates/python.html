@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/python.css') }}" />
+</head>
+
+<body>
+
+  <!-- loader -->
+  <div id="loader">
+    <div class="spinnerContainer">
+      <div class="spinner"></div>
+      <div class="loader">
+        <p>loading</p>
+        <div class="words">
+          <span class="word">haii</span>
+          <span class="word">Tunggu</span>
+          <span class="word">Sebentar</span>
+          <span class="word">mohon</span>
+          <span class="word">bersabar</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-wrapper">
+    <div class="scroll-track">
+
+      <!-- CARD 1 -->
+      <div class="card">
+        <img src="{{ url_for('static', filename='chocolate img/kasir.png') }}" alt="python">
+        <div class="card__content">
+          <p class="card__title">Kasir cerdas</p>
+          <p class="card__description">“Kasir Cerdas merupakan salah satu proyek Python yang saya terima dari mentor
+            sebagai bagian dari proses pembelajaran dan evaluasi.”
+            .</p>
+          <a href="https://github.com/radensa-cmyk/Tugas-pekanan-/commit/674c8d4970ebea14ad4ac8f405972ac952ebadce"
+            class="card__button">Kunjungi Project</a>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="card">
+        <img src="{{ url_for('static', filename='chocolate img/laporan.png') }}" alt="python">
+        <div class="card__content">
+          <p class="card__title">Ujian praktikum</p>
+          <p class="card__description">“Dokumen ini merupakan tugas akhir pada mata pelajaran/program pembelajaran
+            Python yang diberikan oleh mentor sebagai bagian dari evaluasi akhir.”.</p>
+          <a href="https://github.com/radensa-cmyk/Tugas-pekanan-/commit/674c8d4970ebea14ad4ac8f405972ac952ebadce#diff-b5b895860c77f5bae862ce805cee8bbd663a6fa58c8f9543178f5354def1bb30"
+            class="card__button">Kunjungi Project</a>
+        </div>
+      </div>
+
+      
+      <div class="card">
+        <img src="{{ url_for('static', filename='chocolate img/bersih.png') }}"alt="python">
+        <div class="card__content">
+          <p class="card__title">Transaksi bersih</p>
+          <p class="card__description">Proyek ini menjadi bagian dari evaluasi pembelajaran, sekaligus melatih kemampuan
+            analisis, perancangan alur program, dan penerapan sintaks Python dalam konteks pemecahan masalah dunia
+            nyata.</p>
+          <a href="https://github.com/radensa-cmyk/Tugas-pekanan-/commit/674c8d4970ebea14ad4ac8f405972ac952ebadce#diff-f9c526ec7407d86002ee5152a54db2c1f22aad6172e88a4504525b26914a4aa4"
+            class="card__button">Kunjungi Project</a>
+        </div>
+      </div>
+
+      <!-- DUPLICATE LOOP
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/python.png') }}" alt="python">
+        <div class="card__content">
+          <p class="card__title">aplikasi pooling</p>
+          <p class="card__description">Proyek ini juga bertujuan melatih keterampilan analitis, perancangan alur logika,
+            dan pemrograman terstruktur sehingga mahasiswa dapat memahami bagaimana sebuah aplikasi interaktif dirancang
+            dan dijalanka</p>
+          <a href="https://github.com/radensa-cmyk/SMA-IT-PYTHON/commit/35870da58dab125e576d4ba40c557a73a50e6267#diff-d633650c5938ff279245b43f2dd77cead0be1b3fe72a41c9d82c0c85f44c6a6e"
+            class="card__button">Kunjungi Project</a>
+        </div>
+      </div> -->
+
+      <!-- <div class="card">
+        <img src="images/bukutamu.png">
+        <div class="card__content">
+          <p class="card__title">Buku Tamu Digital</p>
+          <p class="card__description">Project Guestbook dengan desain menarik.</p>
+          <a href="#" class="card__button">Kunjungi Project</a>
+        </div>
+      </div> -->
+
+      <!-- <div class="card">
+        <img src="images/fauxica.png">
+        <div class="card__content">
+          <p class="card__title">Fauxica Store</p>
+          <p class="card__description">Landing page modern dan elegan.</p>
+          <a href="#" class="card__button">Kunjungi Project</a>
+        </div>
+      </div> -->
+
+    </div>
+  </div>
+
+  <!-- BUTTON KEMBALI KE HOME -->
+  <div class="back-wrapper">
+    <a href="/portfolio" class="back-home">⬅ Kembali ke Home</a>
+  </div>
+
+        <script src="{{ url_for('static', filename='java sc/main.js') }}"></script>
+</body>
+
+</html>

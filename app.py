@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, flash, url_for, redirect
 
 app = Flask(__name__)
 
@@ -9,9 +9,6 @@ def halaman_utama():
 @app.route('/profil')
 def halaman_profil():
     return "Ini adalah halaman profil saya."
-
-if __name__ == '__main__':
-    app.run(debug=True)
 
 
 @app.route('/2')
@@ -62,23 +59,85 @@ def buku_tamu():
 
 # app = Flask(__name__)
 
+
 semua_pesan = []
 
-@app.route('/miniproject', methods=['GET', 'POST'])
-def halaman_lain():
+@app.route('/', methods=['GET'])
+def home():
+    # Redirect ke bukutamu endpoint
+    return redirect(url_for('bukutamu'))
+
+@app.route('/bukutamu', methods=['GET', 'POST'])
+def bukutamu():
     global semua_pesan
 
     if request.method == 'POST':
-        nama = request.form.get('nama')
-        pesan = request.form.get('pesan')
+        # Validasi backend minimal (selalu lakukan)
+        nama = request.form.get('nama', '').strip()
+        pesan = request.form.get('pesan', '').strip()
 
         if nama and pesan:
-            data_baru = {'nama': nama, 'pesan': pesan}
-            semua_pesan.append(data_baru)
+            # Simpan di paling depan sehingga terbaru muncul di atas
+            semua_pesan.insert(0, {'nama': nama, 'pesan': pesan})
+            # Setelah POST, redirect agar mencegah re-posting ketika refresh
+            return redirect(url_for('bukutamu'))
+        else:
+            # Jika tidak valid, tetap render dengan pesan error sederhana
+            error = "Nama dan Pesan wajib diisi."
+            return render_template('bukutamu.html', semua_pesan=semua_pesan, error_backend=error)
 
-    return render_template('miniproject2.html', semua_pesan=semua_pesan)
+    # GET: tampilkan halaman dengan semua pesan
+    return render_template('bukutamu.html', semua_pesan=semua_pesan)
+
+
+
+
+
+
+
+@app.route('/portfolio')
+def halaman_portfolio():
+    return render_template('portfolio.html')
+
+@app.route('/loading')
+def halaman_loading():
+    return render_template('loading.html')
+
+@app.route('/python')
+def halaman_python():
+    return render_template('python.html')
+
+@app.route('/frontend')
+def halaman_frontend():
+    return render_template('frontend.html')
+
+@app.route('/chocolate')
+def halaman_chocolate():
+    return render_template('chocolate.html')
+
+@app.route('/travel')
+def halaman_travel():
+    return render_template('travel.html')
+
+@app.route('/3d')
+def halaman_3d():
+    return render_template('3d.html')
+
+@app.route('/fuxica')
+def halaman_fuxica():
+    return render_template('fuxica.html')
+
+@app.route('/devbeats')
+def halaman_devbeats():
+    return render_template('devbeats.html')
+
+
+
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
+
 
     

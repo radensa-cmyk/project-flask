@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/chocolate.css') }}" />
+    <title>luthfiaaskana | store</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav__header">
+            <div class="nav__logo">
+                <a href="https://shopee.co.id/luthfiaaskana" class="logo">Cho<span>colate</span></a>
+            </div>
+            <div class="nav__menu__btn" id="menu-btn">
+                <i class="ri-menu-3-line"></i>
+            </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#categories">Kategori</a></li>
+            <li><a href="#contact">Kontak kita</a></li>
+        </ul>
+        <div class="nav__btns">
+            <a href="https://shopee.co.id/luthfiaaskana" class="btn"><i class="ri-shopping-cart-line"></i></a>
+            <a href="notifications.html" class="btn"><i class="ri-notification-3-fill"></i></a>
+        </div>
+
+    </nav>
+
+    <header id="home">
+        <div class="header__image">
+            <img src="{{ url_for('static', filename='chocolate img/coklat 4.jpg') }}" alt="header" />
+        </div>
+        <div class="header__content">
+            <h1>WELCOME TO LUTHFIAASKANA <span>CHOCOLATE</span> STORE</h1>
+            <p class="section__description">
+                “Rasakan sensasi cokelat yang memanjakan! Lelehan rasa manis dan kaya melebur sempurna, menciptakan
+                harmoni yang membuat hati tenang di setiap gigitan. Selamat datang di dunia cokelat, pelarian manis
+                penuh kehangatan dan kebahagiaan!”
+            </p>
+            <div class="header__btn">
+                <a href="https://shopee.co.id/luthfiaaskana" class="btn">Order Disini</a>
+            </div>
+
+            <ul class="socials">
+                <li>
+                    <a href="#"><i class="ri-facebook-fill"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="ri-twitter-fill"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="ri-pinterest-line"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="ri-phone-fill"></i></a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="section__container popular__container" id="menu">
+        <h2 class="section__header">Popular chocolate</h2>
+        <div class="popular__grid">
+            <div class="popular__card">
+                <img src="{{ url_for('static', filename='chocolate img/coklat 1.jpg') }}" alt="popular" />
+                <div class="popular__card__content">
+                    <h4>Souvenir Chocolate </h4>
+                    <h3>$1.7K</h3>
+                </div>
+            </div>
+            <div class="popular__card">
+                <img src="{{ url_for('static', filename='chocolate img/coklat 3.jpg') }}" alt="header" />
+                <div class="popular__card__content">
+                    <h4>Dadu Chocolate</h4>
+                    <h3>$1.7K</h3>
+                </div>
+            </div>
+            <div class="popular__card">
+                <img src="{{ url_for('static', filename='chocolate img/new.jpg') }}" alt="header" />
+                <div class="popular__card__content">
+                    <h4>Kunafa Chocolate</h4>
+                    <h3>$1.7K</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section__container discover__container" id="categories">
+        <h2 class="section__header">Best saller Chocolate</h2>
+        <p class="section__description">
+            “Temukan favorit kamu! Cokelat Luthfia Askana menghadirkan cita rasa cokelat yang kaya dan penuh pesona.
+            Lezat, creamy, dan selalu jadi pilihan utama bagi pecinta cokelat sejati.”
+        </p>
+        <div class="discover__grid">
+            <div class="discover__card">
+                <img src="{{ url_for('static', filename='chocolate img/coklat 2.jpg') }}" alt="discover" />
+                <div class="discover__card__content">
+                    <h4>Dadu Chocolate</h4>
+                    <p class="section__description">
+                        “Cokelat Dadu, harmoni rasa yang sempurna. Lembutnya cokelat premium berpadu dengan
+                        potongan dadu cokelat yang renyah, menghadirkan pengalaman manis yang mewah di setiap sendok.”
+                    </p>
+                    <h3>
+                        $8.00 <span><s>$9.99</s></span>
+                    </h3>
+                    <div class="discover__card__btn">
+                        <button class="btn">Order sekarang</button>
+                    </div>
+                </div>
+            </div>
+            <div class="discover__card">
+                <img src="{{ url_for('static', filename='chocolate img/coklat 6.jpg') }}"  alt="discover"
+                />
+                <div class="discover__card__content">
+                    <h4>Shovenir Chocolate</h4>
+                    <p class="section__description">
+                        Setiap gigitan menghadirkan cokelat lembut nan mewah,
+                        sempurna sebagai hadiah sekaligus kenangan manis tak terlupakan.”
+                    </p>
+                    <h3>
+                        $5.99 <span><s> $8.99</s></span>
+                    </h3>
+                    <div class="discover__card__btn">
+                        <button class="btn">Order sekarang</button>
+                    </div>
+                </div>
+            </div>
+            <div class="discover__card">
+                <img src="{{ url_for('static', filename='chocolate img/coklat 8.jpg') }}" alt="discover" />
+                <div class="discover__card__content">
+                    <h4>Kunafa Chocolate</h4>
+                    <p class="section__description">
+                        ✨ “Nikmati kelezatan istimewa Chocolate Kunafa Delight.
+                        Lapisan kunafa yang renyah keemasan membalut isian cokelat lembut,
+                        disempurnakan dengan siraman sirup manis dan taburan kacang —
+                        perpaduan sempurna antara garing, lumer, dan rasa cokelat yang memanjakan.”
+                    </p>
+                    <h3>
+                        $5.49 <span><s> $10.49</s></span>
+                    </h3>
+                    <div class="discover__card__btn">
+                        <button class="btn">Order sekarang</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="banner">
+        <div class="banner__image"></div>
+        <div class="banner__content">
+            <h2 class="section__header">
+                Dapatkan Chocolate Lezat dengan Harga Terjangkau
+            </h2>
+            <p class="section__description">
+                Manjakan diri Anda dengan Chocolate lezat tanpa menguras kantong!
+                Nikmati kualitas premium dan cita rasa yang menggugah selera dengan harga yang
+                membuat setiap gigitannya sepadan.
+            </p>
+            <div class="banner__flex">
+                <div class="banner__card">
+                    <img src="{{ url_for('static', filename='chocolate img/banner-1.png') }}" alt="header" />
+                    <h4>“Kesegaran Alami dalam Setiap Gigitan Cokelat”</h4>
+                </div>
+                <div class="banner__card">
+                    <img src="{{ url_for('static', filename='chocolate img/banner-2.png') }}" alt="banner" />
+                    <h4>Pengemasan Cepat</h4>
+                </div>
+                <div class="banner__card">
+                    <img src="{{ url_for('static', filename='chocolate img/banner-3.png') }}" alt="banner" />
+                    <h4>Pengiriman cepat</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section__container subscribe__container" id="contact">
+        <div class="subscribe__content">
+            <h2 class="section__header">Subscribe For Discounts</h2>
+            <p class="section__description">
+                JangaGn lewatkan penawaran menarik! Berlangganan sekarang untuk menerima diskon eksklusif
+                dan informasi terbaru tentang rasa Chocolate terbaru dan penawaran spesial
+                kami.
+            </p>
+            <form action="/">
+                <input type="text" placeholder="Type Your Email" />
+                <button class="btn">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="section__container footer__container">
+            <div class="footer__col">
+                <a href="#" class="logo">Cho<span>colate</span></a>
+            </div>
+            <div class="footer__col">
+                <ul class="footer__links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <ul class="socials">
+                    <li>
+                        <a href="#"><i class="ri-facebook-fill"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="ri-twitter-fill"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="ri-pinterest-line"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="ri-phone-fill"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bar">
+            Copyright © 2025 luthfiaaskana. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="{{ url_for('static', filename='java sc/chocolate.js') }}"></script>
+</body>
+
+</html>

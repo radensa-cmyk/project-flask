@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/frontend.css') }}" />
+</head>
+
+<body>
+
+
+    <!-- loader -->
+    <div id="loader">
+        <div class="spinnerContainer">
+            <div class="spinner"></div>
+            <div class="loader">
+                <p>loading</p>
+                <div class="words">
+                    <span class="word">haii</span>
+                    <span class="word">Tunggu</span>
+                    <span class="word">Sebentar</span>
+                    <span class="word">mohon</span>
+                    <span class="word">bersabar</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="scroll-wrapper">
+        <div class="scroll-track">
+
+            <!-- CARD 1 -->
+            <div class="card">
+               <img src="{{ url_for('static', filename='chocolate img/devbeats.png') }}" alt="python">
+                <div class="card__content">
+                    <p class="card__title">Devbeats</p>
+                    <p class="card__description">“Website Devbeats adalah proyek web sederhana yang menampilkan
+                        produk-produk headset dengan desain modern dan elegan. Website ini dibuat dengan fokus pada
+                        tampilan visual yang menarik, navigasi yang mudah,
+                        Berisi
+                        katalog produk, informasi singkat, dan layout responsif sehingga tampil rapi di semua
+                        perangkat.”
+                        .</p>
+                    <a href="/devbeats" class="card__button">Kunjungi Project</a>
+                </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="card">
+                <img src="{{ url_for('static', filename='chocolate img/travel.png') }}" alt="python">
+                <div class="card__content">
+                    <p class="card__title">Website travel</p>
+                    <p class="card__description">Website Travel adalah proyek web yang dirancang untuk menampilkan
+                        layanan perjalanan secara modern dan informatif. Website ini menyediakan halaman destinasi,
+                        paket wisata, serta informasi perjalanan dengan tampilan yang bersih dan mudah digunakan.
+                        Didukung desain responsif, navigasi simple, dan konten yang menarik, website ini membantu
+                        pengguna menemukan tempat liburan terbaik dengan cepat dan nyaman..</p>
+                    <a href="/travel" class="card__button">Kunjungi Project</a>
+                </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="card">
+               <img src="{{ url_for('static', filename='chocolate img/3d.png') }}" alt="python">
+                <div class="card__content">
+                    <p class="card__title">3d portfolio</p>
+                    <p class="card__description">3D Portfolio adalah proyek web portofolio interaktif yang
+                        menampilkan
+                        karya dan profil menggunakan elemen 3D modern. Website ini dirancang dengan tampilan visual
+                        dinamis, animasi halus, dan navigasi yang responsif. Menggunakan efek 3D untuk memberikan
+                        pengalaman yang lebih hidup dan menarik, project ini bertujuan menunjukkan kreativitas,
+                        skill,
+                        serta identitas digital secara unik dan profesional.</p>
+                    <a href="/3d" class="card__button">Kunjungi Project</a>
+                </div>
+            </div>
+
+            <!-- DUPLICATE LOOP -->
+            <div class="card">
+                 <img src="{{ url_for('static', filename='chocolate img/fuxica.png') }}" alt="python">
+                <div class="card__content">
+                    <p class="card__title">Fauxica</p>
+                    <p class="card__description">Fauxica adalah proyek website modern yang menampilkan brand fashion
+                        dengan desain minimalis dan elegan. Website ini fokus pada visual yang bersih, tipografi
+                        premium, dan tata letak yang estetik untuk memperkuat identitas brand. Berisi katalog
+                        produk,
+                        fitur navigasi sederhana, serta desain responsif yang membuat pengguna nyaman mengakses di
+                        berbagai perangkat. Cocok sebagai showcase untuk UI/UX dan front-end development.</p>
+                    <a href="/fuxica" class="card__button">Kunjungi Project</a>
+                </div>
+            </div>
+
+            <!-- <div class="card">
+                <img src="images/bukutamu.png">
+                <div class="card__content">
+                    <p class="card__title">Devbeats</p>
+                    <p class="card__description">Project devbeats dengan desain menarik.</p>
+                    <a href="/devbeats" class="card__button">Kunjungi Project</a>
+                </div>
+            </div> -->
+
+            <!-- <div class="card">
+        <img src="images/fauxica.png">
+        <div class="card__content">
+          <p class="card__title">Fauxica Store</p>
+          <p class="card__description">Landing page modern dan elegan.</p>
+          <a href="#" class="card__button">Kunjungi Project</a>
+        </div>
+      </div> -->
+
+        </div>
+    </div>
+
+    <!-- BUTTON KEMBALI KE HOME -->
+    <div class="back-wrapper">
+        <a href="/portfolio" class="back-home">⬅ Kembali ke Home</a>
+    </div>
+
+    <script src="{{ url_for('static', filename='java sc/main.js') }}"></script>
+
+</body>
+
+</html>

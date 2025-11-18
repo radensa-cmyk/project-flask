@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Buku Tamu</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #4f46e5, #6d28d9);
+            min-height: 100vh;
+            padding: 40px;
+            color: #fff;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 32px;
+            font-weight: 700;
+            text-shadow: 0 3px 8px rgba(0,0,0,0.3);
+        }
+
+        form {
+            max-width: 450px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 25px;
+            border-radius: 16px;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        label {
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 6px;
+            margin-bottom: 18px;
+            border: none;
+            border-radius: 10px;
+            outline: none;
+        }
+
+        textarea {
+            height: 120px;
+            resize: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #0ea5e9;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            color: #fff;
+            cursor: pointer;
+            font-weight: 700;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background: #38bdf8;
+            transform: translateY(-2px);
+        }
+
+        hr {
+            border: none;
+            border-top: 2px solid rgba(255,255,255,0.4);
+            margin: 40px auto;
+            width: 80%;
+        }
+
+        .pesan-box {
+            max-width: 500px;
+            margin: auto;
+            background: rgba(255,255,255,0.18);
+            padding: 20px;
+            border-radius: 14px;
+            backdrop-filter: blur(6px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        .pesan-box h3 {
+            margin-bottom: 10px;
+        }
+
+        .pesan-box p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        em {
+            opacity: 0.9;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1>Buku Tamu</h1>
+
+    <form action="/bukutamu" method="POST">
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama" required>
+
+        <label for="pesan">Pesan:</label>
+        <textarea id="pesan" name="pesan" required></textarea>
+
+        <button type="submit">Kirim</button>
+    </form>
+
+    <hr>
+
+    {% if nama_terbaru and pesan_terbaru %}
+    <div class="pesan-box">
+        <h3>Pesan Terbaru:</h3>
+        <p>"{{ pesan_terbaru }}" — <em>{{ nama_terbaru }}</em></p>
+    </div>
+    {% endif %}
+
+</body>
+</html>

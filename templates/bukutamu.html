@@ -1,26 +1,332 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <title>Buku Tamu</title>
+
+    <style>
+        #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #bdc3c7 no-repeat center center;
+            background-size: cover;
+            z-index: 9999;
+            transition: opacity 30s ease;
+        }
+
+
+        #loader.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+
+        .spinnerContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(8px);
+        }
+
+        .spinner {
+            width: 56px;
+            height: 56px;
+            display: grid;
+            border: 4px solid #0000;
+            border-radius: 50%;
+            border-right-color: #299fff;
+            animation: tri-spinner 1s infinite linear;
+        }
+
+        .spinner::before,
+        .spinner::after {
+            content: "";
+            grid-area: 1/1;
+            margin: 2px;
+            border: inherit;
+            border-radius: 50%;
+            animation: tri-spinner 2s infinite;
+        }
+
+        .spinner::after {
+            margin: 8px;
+            animation-duration: 3s;
+        }
+
+        @keyframes tri-spinner {
+            100% {
+                transform: rotate(1turn);
+            }
+        }
+
+        .loader {
+            color: #ffffff;
+            font-weight: 500;
+            font-size: 25px;
+            display: flex;
+            align-items: center;
+            border-radius: 8px;
+        }
+
+        .words {
+            overflow: hidden;
+            height: 30px;
+        }
+
+        .word {
+            display: block;
+            height: 100%;
+            padding-left: 6px;
+            color: #299fff;
+            animation: cycle-words 5s infinite;
+        }
+
+        @keyframes cycle-words {
+            10% {
+                transform: translateY(-105%);
+            }
+
+            25% {
+                transform: translateY(-100%);
+            }
+
+            35% {
+                transform: translateY(-205%);
+            }
+
+            50% {
+                transform: translateY(-200%);
+            }
+
+            60% {
+                transform: translateY(-305%);
+            }
+
+            75% {
+                transform: translateY(-300%);
+            }
+
+            85% {
+                transform: translateY(-405%);
+            }
+
+            100% {
+                transform: translateY(-400%);
+            }
+        }
+
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background-image: url("https://i.pinimg.com/736x/31/d8/43/31d8433b4a514d821cddaf3e908fcc87.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding: 40px;
+            backdrop-filter: blur(4px);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 35px;
+            font-weight: 700;
+            color: white;
+            text-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Container Glass Effect */
+        .glass-box {
+            max-width: 480px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 25px;
+            border-radius: 18px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 35px rgba(0, 0, 0, 0.3);
+            color: white;
+        }
+
+        label {
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 6px;
+            margin-bottom: 18px;
+            border: none;
+            border-radius: 10px;
+            outline: none;
+            background: rgba(255, 255, 255, 0.3);
+            color: white;
+        }
+
+        textarea {
+            height: 120px;
+            resize: none;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background: #0ea5e9;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            color: #fff;
+            cursor: pointer;
+            font-weight: 700;
+            transition: 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            transform: translateY(-2px);
+            background: #38bdf8;
+        }
+
+        hr {
+            border: none;
+            border-top: 2px solid rgba(255, 255, 255, 0.4);
+            margin: 40px auto;
+            width: 80%;
+        }
+
+        .pesan-card {
+            max-width: 500px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.18);
+            padding: 20px;
+            border-radius: 14px;
+            backdrop-filter: blur(6px);
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+            color: white;
+        }
+
+        .pesan-card h3 {
+            margin-bottom: 10px;
+        }
+
+        /* ============================
+           BUTTON BACK TO HOME (UIVERSE)
+        ============================= */
+        .back-btn-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 35px;
+        }
+
+        .back-btn {
+            padding: 0.1em 0.25em;
+            width: 13em;
+            height: 4.2em;
+            background-color: #212121;
+            border: 0.08em solid #fff;
+            border-radius: 0.3em;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        .back-btn span {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            bottom: 0.4em;
+            width: 8.25em;
+            height: 2.5em;
+            background-color: #212121;
+            border-radius: 0.2em;
+            font-size: 1.5em;
+            color: #fff;
+            border: 0.08em solid #fff;
+            box-shadow: 0 0.4em 0.1em 0.019em #fff;
+        }
+
+        .back-btn span:hover {
+            transition: all 0.5s;
+            transform: translate(0, 0.4em);
+            box-shadow: 0 0 0 0 #fff;
+        }
+    </style>
+
 </head>
+
 <body>
+
+
+    <div id="loader">
+        <div class="spinnerContainer">
+            <div class="spinner"></div>
+            <div class="loader">
+                <p>loading</p>
+                <div class="words">
+                    <span class="word">haii</span>
+                    <span class="word">Tunggu</span>
+                    <span class="word">Sebentar</span>
+                    <span class="word">mohon</span>
+                    <span class="word">bersabar</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <h1>Buku Tamu</h1>
-    <form action="/bukutamu" method="POST">
-        <label for="nama">Nama:</label><br>
-        <input type="text" id="nama" name="nama" required><br><br>
 
-        <label for="pesan">Pesan:</label><br>
-        <textarea id="pesan" name="pesan" required></textarea><br><br>
+    <div class="glass-box">
+        <form action="/bukutamu" method="POST">
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama" required>
 
-        <button type="submit">Kirim</button>
-    </form>
+            <label for="pesan">Pesan:</label>
+            <textarea id="pesan" name="pesan" required></textarea>
+
+            <button type="submit">Kirim</button>
+        </form>
+    </div>
 
     <hr>
 
     {% if nama_terbaru and pesan_terbaru %}
+    <div class="pesan-card">
         <h3>Pesan Terbaru:</h3>
-        <p>"{{ pesan_terbaru }}" - <em>{{ nama_terbaru }}</em></p>
+        <p>"{{ pesan_terbaru }}" — <em>{{ nama_terbaru }}</em></p>
+    </div>
     {% endif %}
+
+    <!-- BUTTON BACK TO HOME -->
+    <div class="back-btn-container">
+        <a href="/portfolio" style="text-decoration:none;">
+            <button class="back-btn">
+                <span>Kembali</span>
+            </button>
+        </a>
+    </div>
+
+    <script src="{{ url_for('static', filename='java sc/main.js') }}"></script>
+
 </body>
+
 </html>

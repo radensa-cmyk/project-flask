@@ -1,0 +1,61 @@
+@media screen and (max-width: 100px) {
+    P {
+        font-size: 0, 9rem;
+        line-height: 1.8rem;
+    }
+
+}
+
+@media screen and (max-width: 825px) {}
+
+@media screen and (max-width: 640px) {}
+
+h4 tema-1 {
+    color: aquamarine;
+}
+
+@media screen and (max-width: 825px) {
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .toggle-burger .line-1 {
+        transform: rotate(-45deg) translate(-5px, 7px);
+    }
+
+    .toggle-burger .line-2 {
+        opacity: 0;
+    }
+
+    .toggle-burger .line-3 {
+        transform: rotate(45deg) translate(-5px, -7px);
+    }
+
+
+    nav {
+        position: fixed;
+        width: 50%;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        flex-direction: column;
+        background: #FAF8F1;
+        border-left: 1px solid var(--borderColor);
+        z-index: 9;
+        transform: translateX(100%);
+        transition: .4s ease-in;
+
+    }
+
+    nav ul {
+        height: 100vh;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .nav-active {
+        transform: translateX(0);
+    }
+}

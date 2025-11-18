@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio 3d</title>
+    <!-- boxicon -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css" />
+
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/3d.css') }}" />
+
+</head>
+
+<body>
+
+
+    <!-- navbar -->
+    <nav class="nav">
+        <ul class="nav-list">
+            <li class="active">
+                <i class="ph ph-house-line"></i>
+                <span class="tooltip">home</span>
+            </li>
+            <li>
+                <i class="ph ph-user-circle-gear"></i>
+                <span class="tooltip">About</span>
+            </li>
+            <li>
+                <i class="ph ph-book-open-text"></i>
+                <span class="tooltip">Resume</span>
+            </li>
+            <li>
+                <i class="ph ph-briefcase"></i>
+                <span class="tooltip">portfolio</span>
+            </li>
+            <li>
+                <i class="ph ph-envelope-open"></i>
+                <span class="tooltip">contact</span>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="box">
+            <!-- home section -->
+            <section class="section home active">
+                <div class="home-info">
+                    <h3>Hello I'm</h3>
+                    <h1>Abu Musa Alasyary</h1>
+                    <h3>frontend Developer</h3>
+                    <p>
+                        Aku adalah seorang siswa pelajar SMA yang menduduki bangku kelas 12 di sekolah HSI Boarding
+                        School, tempat di mana aku tidak hanya belajar tentang ilmu pengetahuan umum, tetapi juga dibina
+                        dalam kedisiplinan, akhlak, dan nilai-nilai keislaman.
+                        Di sekolah ini, aku belajar untuk menjadi pribadi yang mandiri, bertanggung jawab, dan berakhlak
+                        mulia, serta terus berusaha mengembangkan potensi diri agar bisa bermanfaat bagi umat dan masa
+                        depan bangsa.
+
+                    </p>
+                    <div class="btn-sci">
+                        <a href="#" class="btn">Welcome</a>
+                        <div class="sci">
+                            <a href="#">
+                                <i class="ph ph-github-logo"></i>
+                                <span class="tooltip">Github</span>
+                            </a>
+                            <a href="#">
+                                <i class="ph ph-linkedin-logo"></i>
+                                <span class="tooltip">Linkedin</span>
+                            </a>
+                            <a href="#">
+                                <i class="ph ph-medium-logo"></i>
+                                <span class="tooltip">Medium</span>
+                            </a>
+                            <a href="#">
+                                <i class="ph ph-youtube-logo"></i>
+                                <span class="tooltip">youtube</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="img-wrapper">
+                    <div class="img-box home-img">
+                        <img src="{{ url_for('static', filename='img 3d/profil-removebg-preview.png') }}" alt="profil">
+
+                    </div>
+                </div>
+            </section>
+            <!-- section -->
+            <section class="section about">
+                <div class="img-wrapper">
+                    <div class="img-box about-img">
+                        <img src="{{ url_for('static', filename='img 3d/profil-removebg-preview.png') }}" alt="profil">
+                    </div>
+                </div>
+
+                <div class="about-info">
+                    <h2 class="title">about me</h2>
+                    <h3>Frontend Developer</h3>
+                    <p>Aku adalah seorang siswa pelajar SMA yang menduduki bangku kelas 12 di sekolah HSI Boarding
+                        School, tempat di mana aku tidak hanya belajar tentang ilmu pengetahuan umum, tetapi juga dibina
+                        dalam kedisiplinan, akhlak, dan nilai-nilai keislaman.
+                        Di sekolah ini, aku belajar untuk menjadi pribadi yang mandiri, bertanggung jawab, dan berakhlak
+                        mulia, serta terus berusaha mengembangkan potensi diri agar bisa bermanfaat bagi umat dan masa
+                        depan bangsa.</p>
+                    <a href="#" class="btn">View more</a>
+                </div>
+            </section>
+            <!-- resume -->
+            <section class="section resume">
+                <h2 class="title">Resume</h2>
+                <div class="tab-box">
+                    <div class="tab-list resume-list active">
+                        <h3>Experience</h3>
+                    </div>
+                    <div class="tab-list resume-list">
+                        <h3>Skills</h3>
+                    </div>
+                    <div class="tab-list resume-list">
+                        <h3>Education</h3>
+                    </div>
+                </div>
+                <div class="tab-wrapper">
+                    <div class="tab-grid resume-box experience active">
+                        <div class="tab-item resume-item">
+                            <h4>2025 - Present</h4>
+                            <h4>Frontend Developer</h4>
+                            <h4>Web Developer</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, officiis quis
+                                architecto ducimus consectetur distinctio quidem commodi atque eveniet voluptatum.</p>
+                        </div>
+                        <div class="tab-item resume-item">
+                            <h4>2025 - present</h4>
+                            <h4>Backend Developer</h4>
+                            <h4>Python Developer</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, officiis quis
+                                architecto ducimus consectetur distinctio quidem commodi atque eveniet voluptatum.</p>
+                        </div>
+                        <div class="tab-item resume-item">
+                            <h4>2023 - 2024</h4>
+                            <h4>Networking</h4>
+                            <h4>Cisco Packet</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, officiis quis
+                                architecto ducimus consectetur distinctio quidem commodi atque eveniet voluptatum.</p>
+                        </div>
+                        <div class="tab-item resume-item">
+                            <h4>2022 - 2023</h4>
+                            <h4>UI/UX Desinger</h4>
+                            <h4>Figma</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, officiis quis
+                                architecto ducimus consectetur distinctio quidem commodi atque eveniet voluptatum.</p>
+                        </div>
+                        <div class="tab-item resume-item">
+                            <h4>2025 - 2025</h4>
+                            <h4>Agile Metodologi</h4>
+                            <h4>Agile</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, officiis quis
+                                architecto ducimus consectetur distinctio quidem commodi atque eveniet voluptatum.</p>
+                        </div>
+                        <div class="tab-item resume-item">
+                            <h4>2024 - 2025</h4>
+                            <h4>English languange</h4>
+                            <h4>English</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, officiis quis
+                                architecto ducimus consectetur distinctio quidem commodi atque eveniet voluptatum.</p>
+                        </div>
+                    </div>
+
+                    <div class="tab-grid resume-box skills">
+                        <div class="tab-item resume-item">
+                            <i class="ph ph-file-html"></i>
+                            <p>HTML5</p>
+                        </div>
+                        <div class="tab-item resume-item">
+                            <i class="ph ph-file-css"></i>
+                            <p>CSS3</p>
+                        </div>
+                        <div class="tab-item resume-item">
+                            <i class="ph ph-file-js"></i>
+                            <p>JavaScript</p>
+                        </div>
+                        <div class="tab-item resume-item">
+                            <i class="ph ph-file-py"></i>
+                            <p>Python</p>
+                        </div>
+                        <div class="tab-item resume-item">
+                            <p>Django</p>
+                        </div>
+                        <div class="tab-item resume-item">
+                            <i class="ph ph-figma-logo"></i>
+                            <p>Figma</p>
+                        </div>
+                        <div class="tab-item resume-item">
+
+                            <p>Canva</p>
+                        </div>
+                        <div class="tab-item resume-item">
+                            <i class="ph ph-discord-logo"></i>
+                            <p>Cisco</p>
+                        </div>
+                    </div>
+
+                    <div class="tab-grid resume-box Education">
+                        <div class="tab-item resume-item">
+                            <h4>2025</h4>
+                            <h4>Web Developer</h4>
+                            <h4>Online course</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut et nostrum repellat, tempora
+                                cupiditate autem voluptate iure. Corporis, nemo magni.</p>
+                        </div>
+                        <div class="tab-item resume-item">
+                            <h4>2025</h4>
+                            <h4>Python Developer</h4>
+                            <h4>Online course</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut et nostrum repellat, tempora
+                                cupiditate autem voluptate iure. Corporis, nemo magni.</p>
+                        </div>
+                        <div class="tab-item resume-item">
+                            <h4>2025</h4>
+                            <h4>Agile Metodologi</h4>
+                            <h4>Online course</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut et nostrum repellat, tempora
+                                cupiditate autem voluptate iure. Corporis, nemo magni.</p>
+                        </div>
+                        <div class="tab-item resume-item">
+                            <h4>2023 - 2025</h4>
+                            <h4>English languange</h4>
+                            <h4>Online course</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut et nostrum repellat, tempora
+                                cupiditate autem voluptate iure. Corporis, nemo magni.</p>
+                        </div>
+                        <div class="tab-item resume-item">
+                            <h4>2023 - 2024</h4>
+                            <h4>Networking</h4>
+                            <h4>Ofline course</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut et nostrum repellat, tempora
+                                cupiditate autem voluptate iure. Corporis, nemo magni.</p>
+                        </div>
+                        <div class="tab-item resume-item">
+                            <h4>2022 - 2023</h4>
+                            <h4>UI/UX Design</h4>
+                            <h4>Ofline course</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut et nostrum repellat, tempora
+                                cupiditate autem voluptate iure. Corporis, nemo magni.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- service -->
+            <section class="section portfolio">
+                <h2 class="title">portfolio</h2>
+                <div class="tab-box">
+                    <div class="tab-list portfolio-list active">
+                        <h3>My Work</h3>
+                    </div>
+                    <div class="tab-list portfolio-list">
+                        <h3>My Service</h3>
+                    </div>
+                </div>
+                <div class="tab-wrapper">
+                    <div class="tab-grid portfolio-box work active">
+                        <div class="tab-item portfolio-item">
+                            <div class="work-img">
+                                <img src="{{ url_for('static', filename='img 3d/front.png') }}" alt="frontend img">
+                            </div>
+                            <div class="work-info">
+                                <h4>Frontend project</h4>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde, cum! Unde consectetur
+                                    optio dolore, sunt vero obcaecati quidem blanditiis porro.</p>
+                                <div class="tech-used">
+                                    <p>HTML5, CSS3, JavaScript</p>
+                                </div>
+                                <div class="portfolio-icon work-icon">
+                                    <a href="#">
+                                        <i class="ph ph-arrow-bend-up-left"></i>
+                                        <span class="tooltip">preview</span>
+                                    </a>
+                                    <a href="#">
+                                        <i class="ph ph-github-logo"></i>
+                                        <span class="tooltip">Github Repository</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-item portfolio-item">
+                            <div class="work-img">
+                                <img src="{{ url_for('static', filename='img 3d/010.png') }}" alt="backtend img">
+                            </div>
+                            <div class="work-info">
+                                <h4>Backend project</h4>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde, cum! Unde consectetur
+                                    optio dolore, sunt vero obcaecati quidem blanditiis porro.</p>
+                                <div class="tech-used">
+                                    <p>Python, VScode</p>
+                                </div>
+                                <div class="portfolio-icon work-icon">
+                                    <a href="#">
+                                        <i class="ph ph-arrow-bend-up-left"></i>
+                                        <span class="tooltip">preview</span>
+                                    </a>
+                                    <a href="#">
+                                        <i class="ph ph-github-logo"></i>
+                                        <span class="tooltip">Github Repository</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-item portfolio-item">
+                            <div class="work-img">
+                                <img src="{{ url_for('static', filename='img 3d/uiux.png') }}"
+                                    alt="frontend img">
+                            </div>
+                            <div class="work-info">
+                                <h4>UI/UX desingner</h4>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde, cum! Unde consectetur
+                                    optio dolore, sunt vero obcaecati quidem blanditiis porro.</p>
+                                <div class="tech-used">
+                                    <p>Figma, Canva</p>
+                                </div>
+                                <div class="portfolio-icon work-icon">
+                                    <a href="#">
+                                        <i class="ph ph-arrow-bend-up-left"></i>
+                                        <span class="tooltip">preview</span>
+                                    </a>
+                                    <a href="#">
+                                        <i class="ph ph-github-logo"></i>
+                                        <span class="tooltip">Github Repository</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-item portfolio-item">
+                            <div class="work-img">
+                                <img src="https://calesmart.com/assets/img/post/346574e979e78ec0322e49f5c9369873.jpg"
+                                    alt="frontend img">
+                            </div>
+                            <div class="work-info">
+                                <h4>Networking project</h4>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde, cum! Unde consectetur
+                                    optio dolore, sunt vero obcaecati quidem blanditiis porro.</p>
+                                <div class="tech-used">
+                                    <p>Cisco packet tracher</p>
+                                </div>
+                                <div class="portfolio-icon work-icon">
+                                    <a href="#">
+                                        <i class="ph ph-arrow-bend-up-left"></i>
+                                        <span class="tooltip">preview</span>
+                                    </a>
+                                    <a href="#">
+                                        <i class="ph ph-github-logo"></i>
+                                        <span class="tooltip">Github Repository</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-item portfolio-item">
+                            <div class="work-img">
+                                <img src="data:image/png;base64,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"
+                                    alt="frontend img">
+                            </div>
+                            <div class="work-info">
+                                <h4>Agile project</h4>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde, cum! Unde consectetur
+                                    optio dolore, sunt vero obcaecati quidem blanditiis porro.</p>
+                                <div class="tech-used">
+                                    <p>Agile metodologi</p>
+                                </div>
+                                <div class="portfolio-icon work-icon">
+                                    <a href="#">
+                                        <i class="ph ph-arrow-bend-up-left"></i>
+                                        <span class="tooltip">preview</span>
+                                    </a>
+                                    <a href="#">
+                                        <i class="ph ph-github-logo"></i>
+                                        <span class="tooltip">Github Repository</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-item portfolio-item">
+                            <div class="work-img">
+                                <img src="data:image/jpeg;base64,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"
+                                    alt="frontend img">
+                            </div>
+                            <div class="work-info">
+                                <h4>English Languange</h4>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde, cum! Unde consectetur
+                                    optio dolore, sunt vero obcaecati quidem blanditiis porro.</p>
+                                <div class="tech-used">
+                                    <p>English Languange</p>
+                                </div>
+                                <div class="portfolio-icon work-icon">
+                                    <a href="#">
+                                        <i class="ph ph-arrow-bend-up-left"></i>
+                                        <span class="tooltip">preview</span>
+                                    </a>
+                                    <a href="#">
+                                        <i class="ph ph-github-logo"></i>
+                                        <span class="tooltip">Github Repository</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-grid portfolio-box service">
+                        <div class="tab-item portfolio-item">
+                            <div class="portfolio-icon service-icon">
+                                <i class="ph ph-code icon"></i>
+                                <a href="#"><i class="ph ph-arrow-bend-up-left"></i></a>
+                            </div>
+                            <h4>Web Development</h4>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium cupiditate
+                                asperiores blanditiis ea eaque explicabo et velit excepturi assumenda impedit.
+                            </p>
+                        </div>
+                        <div class="tab-item portfolio-item">
+                            <div class="portfolio-icon service-icon">
+                                <i class="ph ph-palette icon"></i>
+                                <a href="#"><i class="ph ph-arrow-bend-up-left"></i></a>
+                            </div>
+                            <h4>Graphic Designer</h4>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium cupiditate
+                                asperiores blanditiis ea eaque explicabo et velit excepturi assumenda impedit.
+                            </p>
+                        </div>
+                        <div class="tab-item portfolio-item">
+                            <div class="portfolio-icon service-icon">
+                                <i class="ph ph-paint-brush icon"></i>
+                                <a href="#"><i class="ph ph-arrow-bend-up-left"></i></a>
+                            </div>
+                            <h4>UI/UX Designer</h4>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium cupiditate
+                                asperiores blanditiis ea eaque explicabo et velit excepturi assumenda impedit.
+                            </p>
+                        </div>
+                        <div class="tab-item portfolio-item">
+                            <div class="portfolio-icon service-icon">
+                                <i class="ph ph-broadcast icon"></i>
+                                <a href="#"><i class="ph ph-arrow-bend-up-left"></i></a>
+                            </div>
+                            <h4>Networking</h4>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium cupiditate
+                                asperiores blanditiis ea eaque explicabo et velit excepturi assumenda impedit.
+                            </p>
+                        </div>
+                        <div class="tab-item portfolio-item">
+                            <div class="portfolio-icon service-icon">
+                                <i class="ph ph-gear icon"></i>
+                                <a href="#"><i class="ph ph-arrow-bend-up-left"></i></a>
+                            </div>
+                            <h4>Agile Motodology</h4>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium cupiditate
+                                asperiores blanditiis ea eaque explicabo et velit excepturi assumenda impedit.
+                            </p>
+                        </div>
+                        <div class="tab-item portfolio-item">
+                            <div class="portfolio-icon service-icon">
+                                <i class="ph ph-user-sound icon"></i>
+                                <a href="#"><i class="ph ph-arrow-bend-up-left"></i></a>
+                            </div>
+                            <h4>English languange</h4>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium cupiditate
+                                asperiores blanditiis ea eaque explicabo et velit excepturi assumenda impedit.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <!-- contact section -->
+            <section class="section contact">
+                <h2 class="title">Contact</h2>
+                <div class="contact-wrapper">
+                    <form action="" class="contact-form">
+                        <h3>Let's Work Together!</h3>
+
+                        <div class="field-box">
+                            <input type="text" placeholder="Full Name" required>
+                            <input type="email" placeholder="Email Address" required>
+                            <input type="text" placeholder="Phone Number" required>
+                            <input type="text" placeholder="Email Subject" required>
+                            <textarea name="" id="" placeholder="Your Message" required></textarea>
+                        </div>
+
+                        <div class="contact-btn">
+                            <button type="submit" class="btn">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+
+        </div>
+    </div>
+
+
+    <!-- java script -->
+    <script src="{{ url_for('static', filename='java sc/3d.js') }}"></script>
+</body>
+
+</html>
