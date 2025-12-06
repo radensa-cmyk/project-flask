@@ -1,7 +1,7 @@
 window.addEventListener("load", function () {
     const loader = document.getElementById("loader");
 
-    const delay = 2000; 
+    const delay = 300; 
 
     setTimeout(() => {
         loader.classList.add("fade-out");

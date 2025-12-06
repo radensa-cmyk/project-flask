@@ -4,121 +4,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/frontend.css') }}" />
+    <title>Simple Portfolio</title>
+
+    <style>
+        :root {
+            --orange: #ff9f1c;
+            --dark: #F8F8F8;
+            --light: #FFFF;
+            --grey: #F5E7C6;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--dark);
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+
+        .logo {
+            width: 60px;
+
+            height: auto;
+            display: block;
+            margin: 0 auto 20px;
+
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 32px;
+            color: var(--orange);
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: var(--light);
+            width: 300px;
+            padding: 20px;
+            border-radius: 18px;
+            box-shadow: 0 6px 18px rgba(121, 121, 121, 0.25);
+            color: #F5E7C6;
+            border: 2px solid var(--grey);
+            transition: 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(78, 78, 77, 0.3);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+
+        .card h2 {
+            margin-top: 0;
+            color: var(--orange);
+            font-size: 22px;
+        }
+
+        .card p {
+            font-size: 14px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 18px;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 10px;
+            text-decoration: none;
+            color: rgb(12, 12, 12);
+            background: var(--orange);
+            transition: 0.2s;
+        }
+
+        .btn:hover {
+            opacity: 0.85;
+        }
+
+        .back-btn-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 35px;
+        }
+
+        .back-btn {
+            padding: 0.1em 0.25em;
+            width: 13em;
+            height: 4.2em;
+            background-color: #212121;
+            border: 0.08em solid #fff;
+            border-radius: 0.3em;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        .back-btn span {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            bottom: 0.4em;
+            width: 8.25em;
+            height: 2.5em;
+            background-color: #212121;
+            border-radius: 0.2em;
+            font-size: 1.5em;
+            color: #fff;
+            border: 0.08em solid #fff;
+            box-shadow: 0 0.4em 0.1em 0.019em #fff;
+        }
+
+        .back-btn span:hover {
+            transition: all 0.5s;
+            transform: translate(0, 0.4em);
+            box-shadow: 0 0 0 0 #fff;
+        }
+    </style>
 </head>
+.
 
 <body>
+    <img src="{{ url_for('static', filename='img/musa.png') }}" alt="Logo" class="logo">
+    <h1>welcome</h1>
 
+    <div class="container">
 
-    <!-- loader -->
-    <div id="loader">
-        <div class="spinnerContainer">
-            <div class="spinner"></div>
-            <div class="loader">
-                <p>loading</p>
-                <div class="words">
-                    <span class="word">haii</span>
-                    <span class="word">Tunggu</span>
-                    <span class="word">Sebentar</span>
-                    <span class="word">mohon</span>
-                    <span class="word">bersabar</span>
-                </div>
-            </div>
+        <!-- CARD 1 -->
+        <div class="card">
+            <img src="{{ url_for('static', filename='img/devbeats.png') }}" alt="Project Image 1">
+            <h2>Devbeats</h2>
+            <p>“Website Devbeats adalah proyek web sederhana yang menampilkan
+                produk-produk headset dengan desain modern dan elegan. Website ini dibuat dengan fokus pada
+                tampilan visual yang menarik, navigasi yang mudah,
+                ”</p>
+            <a href="/devbeats" class="btn">Preview</a>
+            <a href="https://www.linkedin.com/posts/abu-musa-alasyary-a9aa5132b_miniproject-hsiboardingschool-hsibs-activity-7401082903209832448-91nf?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFNFSdYB029Hofi9dD00VZ72BFjPqSkAfFg"
+                class="btn">branding</a>
         </div>
+
+        <!-- CARD 2 -->
+        <div class="card">
+            <img src="{{ url_for('static', filename='img/fuxica.png') }}" alt="Project Image 2">
+            <h2>Fauxica</h2>
+            <p>Fauxica adalah proyek website modern yang menampilkan brand fashion
+                dengan desain minimalis dan elegan. Website ini fokus pada visual yang bersih, tipografi
+                premium, dan tata letak yang estetik untuk memperkuat identitas brand. Berisi katalog
+                produk,</p>
+            <a href="/fuxica" class="btn">Preview</a>
+            <a href="https://www.linkedin.com/posts/abu-musa-alasyary-a9aa5132b_miniproject-hsiboardingschool-hsibs-activity-7401078705206435840-eWEN?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFNFSdYB029Hofi9dD00VZ72BFjPqSkAfFg"
+                class="btn">branding</a>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='img/datasiswa.png') }}" alt="Project Image 1">
+            <h2>Data siswa</h2>
+            <p>“Dokumen ini merupakan tugas akhir pada mata pelajaran/program pembelajaran
+                Python yang diberikan oleh mentor sebagai bagian dari evaluasi akhir.”</p>
+            <a href="https://medium.com/@bangasaamv/deskripsi-tugas-data-siswa-982ad160c2a3" class="btn">Preview</a>
+            <a href="https://www.linkedin.com/posts/abu-musa-alasyary-a9aa5132b_data-siswa-activity-7401073503749451777-sWPf?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFNFSdYB029Hofi9dD00VZ72BFjPqSkAfFg"
+                class="btn">branding</a>
+        </div>
+
+        
+        <div class="card">
+            <img src="{{ url_for('static', filename='img/kasir.py.png') }}" alt="Project Image 1">
+            <h2>Kasir cerdas</h2>
+            <p>“Kasir Cerdas merupakan salah satu proyek Python yang saya terima dari mentor
+                sebagai bagian dari proses pembelajaran dan evaluasi.”</p>
+            <a href="https://medium.com/@bangasaamv/kasir-cerdas-4c36a2a4275b" class="btn">Preview</a>
+            <a href="https://www.linkedin.com/posts/abu-musa-alasyary-a9aa5132b_kasir-cerdas-activity-7401070490884194304-2Hli?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFNFSdYB029Hofi9dD00VZ72BFjPqSkAfFg"
+                class="btn">branding</a>
+        </div>
+
     </div>
 
-    <div class="scroll-wrapper">
-        <div class="scroll-track">
 
-            <!-- CARD 1 -->
-            <div class="card">
-               <img src="{{ url_for('static', filename='chocolate img/devbeats.png') }}" alt="python">
-                <div class="card__content">
-                    <p class="card__title">Devbeats</p>
-                    <p class="card__description">“Website Devbeats adalah proyek web sederhana yang menampilkan
-                        produk-produk headset dengan desain modern dan elegan. Website ini dibuat dengan fokus pada
-                        tampilan visual yang menarik, navigasi yang mudah,
-                        Berisi
-                        katalog produk, informasi singkat, dan layout responsif sehingga tampil rapi di semua
-                        perangkat.”
-                        .</p>
-                    <a href="/devbeats" class="card__button">Kunjungi Project</a>
-                </div>
-            </div>
-
-            <!-- CARD 2 -->
-            <div class="card">
-                <img src="{{ url_for('static', filename='chocolate img/travel.png') }}" alt="python">
-                <div class="card__content">
-                    <p class="card__title">Website travel</p>
-                    <p class="card__description">Website Travel adalah proyek web yang dirancang untuk menampilkan
-                        layanan perjalanan secara modern dan informatif. Website ini menyediakan halaman destinasi,
-                        paket wisata, serta informasi perjalanan dengan tampilan yang bersih dan mudah digunakan.
-                        Didukung desain responsif, navigasi simple, dan konten yang menarik, website ini membantu
-                        pengguna menemukan tempat liburan terbaik dengan cepat dan nyaman..</p>
-                    <a href="/travel" class="card__button">Kunjungi Project</a>
-                </div>
-            </div>
-
-            <!-- CARD 3 -->
-            <div class="card">
-               <img src="{{ url_for('static', filename='chocolate img/3d.png') }}" alt="python">
-                <div class="card__content">
-                    <p class="card__title">3d portfolio</p>
-                    <p class="card__description">3D Portfolio adalah proyek web portofolio interaktif yang
-                        menampilkan
-                        karya dan profil menggunakan elemen 3D modern. Website ini dirancang dengan tampilan visual
-                        dinamis, animasi halus, dan navigasi yang responsif. Menggunakan efek 3D untuk memberikan
-                        pengalaman yang lebih hidup dan menarik, project ini bertujuan menunjukkan kreativitas,
-                        skill,
-                        serta identitas digital secara unik dan profesional.</p>
-                    <a href="/3d" class="card__button">Kunjungi Project</a>
-                </div>
-            </div>
-
-            <!-- DUPLICATE LOOP -->
-            <div class="card">
-                 <img src="{{ url_for('static', filename='chocolate img/fuxica.png') }}" alt="python">
-                <div class="card__content">
-                    <p class="card__title">Fauxica</p>
-                    <p class="card__description">Fauxica adalah proyek website modern yang menampilkan brand fashion
-                        dengan desain minimalis dan elegan. Website ini fokus pada visual yang bersih, tipografi
-                        premium, dan tata letak yang estetik untuk memperkuat identitas brand. Berisi katalog
-                        produk,
-                        fitur navigasi sederhana, serta desain responsif yang membuat pengguna nyaman mengakses di
-                        berbagai perangkat. Cocok sebagai showcase untuk UI/UX dan front-end development.</p>
-                    <a href="/fuxica" class="card__button">Kunjungi Project</a>
-                </div>
-            </div>
-
-            <!-- <div class="card">
-                <img src="images/bukutamu.png">
-                <div class="card__content">
-                    <p class="card__title">Devbeats</p>
-                    <p class="card__description">Project devbeats dengan desain menarik.</p>
-                    <a href="/devbeats" class="card__button">Kunjungi Project</a>
-                </div>
-            </div> -->
-
-            <!-- <div class="card">
-        <img src="images/fauxica.png">
-        <div class="card__content">
-          <p class="card__title">Fauxica Store</p>
-          <p class="card__description">Landing page modern dan elegan.</p>
-          <a href="#" class="card__button">Kunjungi Project</a>
-        </div>
-      </div> -->
-
-        </div>
+    <div class="back-btn-container">
+        <a href="/portfolio">
+            <button class="back-btn">
+                <span>Kembali</span>
+            </button>
+        </a>
     </div>
 
-    <!-- BUTTON KEMBALI KE HOME -->
-    <div class="back-wrapper">
-        <a href="/portfolio" class="back-home">⬅ Kembali ke Home</a>
-    </div>
-
-    <script src="{{ url_for('static', filename='java sc/main.js') }}"></script>
 
 </body>
 

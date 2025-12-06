@@ -40,31 +40,22 @@ def index():
 @app.route('/bukutamu', methods=['GET', 'POST'])
 def buku_tamu():
     if request.method == 'POST':
-        # Ambil data dari form
+        
         nama = request.form['nama']
         pesan = request.form['pesan']
-        # Kirim kembali ke template dengan data terbaru
+       
         return render_template('bukutamu.html', nama_terbaru=nama, pesan_terbaru=pesan)
     else:
-        # Saat halaman baru dibuka (GET)
+        
         return render_template('bukutamu.html')
 
-# if __name__ == '__main__':
-#     app.run(debug=True)
-
-
-# miniprojek
-
-# from flask import Flask, render_template, request
-
-# app = Flask(__name__)
 
 
 semua_pesan = []
 
 @app.route('/', methods=['GET'])
 def home():
-    # Redirect ke bukutamu endpoint
+    
     return redirect(url_for('bukutamu'))
 
 @app.route('/bukutamu', methods=['GET', 'POST'])
@@ -72,21 +63,22 @@ def bukutamu():
     global semua_pesan
 
     if request.method == 'POST':
-        # Validasi backend minimal (selalu lakukan)
+       
         nama = request.form.get('nama', '').strip()
         pesan = request.form.get('pesan', '').strip()
 
         if nama and pesan:
-            # Simpan di paling depan sehingga terbaru muncul di atas
+            
             semua_pesan.insert(0, {'nama': nama, 'pesan': pesan})
-            # Setelah POST, redirect agar mencegah re-posting ketika refresh
+        
+        
             return redirect(url_for('bukutamu'))
         else:
-            # Jika tidak valid, tetap render dengan pesan error sederhana
+          
             error = "Nama dan Pesan wajib diisi."
             return render_template('bukutamu.html', semua_pesan=semua_pesan, error_backend=error)
 
-    # GET: tampilkan halaman dengan semua pesan
+    
     return render_template('bukutamu.html', semua_pesan=semua_pesan)
 
 
